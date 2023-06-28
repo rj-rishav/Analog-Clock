@@ -1,0 +1,100 @@
+:root{
+    --radius: 205px;
+    --background-color: rgb(19,19,19);
+}
+*,*:before,*:after{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: var(--background-color);
+    
+}
+#clock-frame{
+    position: relative;
+    border: 10px solid white;
+    height: calc(var(--radius)*2);
+    width: calc(var(--radius)*2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+ul{
+    list-style: none;
+    font-weight: 600;
+    font-size: 30px;
+}
+li{
+    position: absolute;
+    transform: translate(-20px,-20px);
+}
+
+/* Number Positioning */
+
+#num-12 {
+    transform: translate(-15px, -200px);
+}
+#num-1 {
+    transform: translate(80px, -175px);
+}
+#num-2 {
+    transform: translate(155px, -105px);
+}
+#num-3 {
+    transform: translate(180px,-15px);
+}
+#num-4 {
+    transform: translate(150px, 70px);
+}
+#num-5 {
+    transform: translate(80px, 140px);
+}
+#num-6 {
+    transform: translate(-7px, 165px);
+}
+#num-7 {
+    transform: translate(-100px, 140px);
+}
+#num-8 {
+    transform: translate(-170px, 70px);
+}
+#num-9 {
+    transform: translate(-190px, -15px);
+}
+#num-10 {
+    transform: translate(-175px, -105px);
+}
+#num-11 {
+    transform: translate(-110px, -170px);
+}
+
+/* Clock Hands */
+#hands-decor{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#seconds-hand{
+    position: absolute;
+    background-image: linear-gradient(white 60%, transparent 40%);
+    height: 340px;
+    width: 1px;
+}
+#minutes-hand{
+    position: absolute;
+    background-image: linear-gradient(white 50%, transparent 50%);
+    height: 340px;
+    width: 3px;
+}
+#hours-hand{
+    position: absolute;
+    background-image: linear-gradient(white 54%, transparent 46%);
+    height: 250px;
+    width: 3px;
+}
