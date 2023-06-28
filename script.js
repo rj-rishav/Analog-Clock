@@ -23,16 +23,17 @@
 // num = document.getElementById("num-11");
 // num.style.transform = "translate(170px,-100px)";
 
+
+const now = new Date();
+const hours = now.getHours();
+const minutes = now.getMinutes();
+const seconds = now.getSeconds();
+    
+const hourHand = document.getElementById("hours-hand");
+const minuteHand = document.getElementById("minutes-hand");
+const secondHand = document.getElementById("seconds-hand");
+
 function updateClock() {
-    const now = new Date();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const seconds = now.getSeconds();
-    
-    const hourHand = document.getElementById("hours-hand");
-    const minuteHand = document.getElementById("minutes-hand");
-    const secondHand = document.getElementById("seconds-hand");
-    
     const hourRotation = (hours % 12) * 30 + minutes * 0.5; // Each hour is 30 degrees, and additional rotation based on minutes
     const minuteRotation = minutes * 6; // Each minute is 6 degrees
     const secondRotation = seconds * 6; // Each second is 6 degrees
